@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="employeeApp">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="employee.js"></script>
+    
+    <style>
+        body {
+            text-align: center;
+            font-family: arial;
+            font-size: 16px;
+            background: grey;
+            color: white;
+        }
+        input {
+            background: lightgrey;
+            color: black;
+        }
+    </style>
+</head>
+
+<body ng-controller="main">
+    <br>
+<div class="continer">
+
+    <div class="row">
+        <div class="col-md-4">
+        <lable>Employee Name</lable>
+        <input type="text" ng-model="name" ng-init="name">
+    </div>
+        <div class="col-md-4">
+        <lable>Employee Title</lable>
+        <input type="text" ng-model="title" ng-init="title">
+    </div>
+    <div class="col-md-4">
+        <lable>Employee Salary</lable>
+        <input type="text" ng-model="salary" ng-init="salary">
+    </div>
+    </div> 
+    <br>
+    <div class="row">
+        <div class="col-md-6" style="text-align:center">
+            <button ng-click='addEmp(name, title, salary)' class="btn btn-primary">Add New</button>
+        </div>
+        <div class="col-md-6" style="text-align:center">
+            <button ng-click="printAll()" class="btn btn-primary">Print all to console</button>
+        </div>    
+    </div>
+  
+    
+</div>
+</body>
+
+</html>
